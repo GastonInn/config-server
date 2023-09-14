@@ -16,6 +16,10 @@ spring:
     generate-ddl: true
     show-sql: true
 
+queue:
+  movie:
+    name: movieQueue
+
 eureka:
   instance:
     prefer-ip-address: true

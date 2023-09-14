@@ -19,6 +19,10 @@ spring:
 server:
   port: ${PORT:${SERVER_PORT:0}}
 
+queue:
+  serie:
+    name: serieQueue
+
 eureka:
   instance:
     prefer-ip-address: true

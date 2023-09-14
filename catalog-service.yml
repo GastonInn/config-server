@@ -19,9 +19,6 @@ spring:
 server:
   port: ${PORT:${SERVER_PORT:0}}
 
-queue:
-  persona:
-    name: serieQueue
 
 eureka:
   instance:
