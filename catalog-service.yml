@@ -19,6 +19,13 @@ spring:
 server:
   port: ${PORT:${SERVER_PORT:0}}
 
+queue:
+  serie:
+    name: serieQueue
+
+queue:
+  movie:
+    name: movieQueue
 
 eureka:
   instance:
