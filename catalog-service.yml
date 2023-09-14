@@ -26,6 +26,18 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+
 resilience4j:
   circuitbreaker:
     instances:
@@ -38,3 +50,12 @@ resilience4j:
         registerHealthIndicator: true
         allowHealthIndicatorToFail: false
         automaticTransitionFromOpenToHalfOpenEnabled: true
+
+  retry:
+    instances:
+      dataService:
+        waitDuration: 1000
+        maxAttempts: 3
+        retryExceptions:
+          - feign.FeignException$InternalServerError
+
