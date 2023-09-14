@@ -23,7 +23,7 @@ queue:
   serie:
     name: serieQueue
 
-queue:
+queue1:
   movie:
     name: movieQueue
 
