@@ -14,7 +14,7 @@ spring:
       version: 4.0.2
   data:
     mongodb:
-      database: test
+      database: catalog
       port: 27018
 server:
   port: ${PORT:${SERVER_PORT:0}}
